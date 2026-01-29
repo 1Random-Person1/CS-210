@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 using std::string;
@@ -109,11 +110,32 @@ int main() {
     return 0;
 }
 
-// C - 1. ------------
+// C - 1.3 ------------
 
+bool areDifferent(const std::vector<int>& a) {
 
+    for (int i = 0; i < a.size(); i++) {
+        for (int j = i + 1; j < a.size(); j++) {
+            if (a[i] == a[j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
+int main() {
+    std::vector<int> value = {1, 4, 3, 4};
 
+    bool result = areDifferent(value);
+
+    if (result) {
+        std::cout << "true \n";
+    } else {
+        std::cout << "false \n";
+    }
+    return 0;
+}
 
 // C - 1. ------------
 
