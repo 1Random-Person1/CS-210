@@ -24,6 +24,46 @@ for (int i = 0; i < 10; i++) {
     *dp[i] = 0.0;
 }
 
+// R - 1.11
+
+class Flower {
+
+private:
+    string name;
+    int petals;
+    float price;
+
+public:
+    Flower(string name, int petals, float price) {
+        this->name = name;
+        this->petals = petals;
+        this->price = price;
+    }
+
+    void setName(string name) {
+        this->name = name;
+    }
+
+    void setPetals(int petals) {
+        this->petals = petals;
+    }
+
+    void setPrice(float price) {
+        this->price = price;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    int getPetals() {
+        return petals;
+    }
+
+    int getPrice() {
+        return price;
+    }
+};
 
 
 int main() {
