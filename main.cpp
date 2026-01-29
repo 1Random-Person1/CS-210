@@ -8,7 +8,8 @@ using std::string;
 //Reinforcements ------------
 
 // R-1.1 ------------
-// D is not valid due to it having special characters
+
+D is not valid due to it having special characters
 
 // R - 1.3 ------------
 
@@ -65,13 +66,13 @@ public:
         return petals;
     }
 
-    int getPrice() {
+    float getPrice() {
         return price;
     }
 };
 
 int main() {
-    Flower flower = new Flower("Red Rose", 5, 2.99);
+    Flower flower ("Red Rose", 5, 2.99);
     std::cout << flower.getName() << std::endl;
     std::cout << flower.getPetals() << std::endl;
     std::cout << flower.getPrice() << std::endl;
