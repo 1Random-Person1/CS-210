@@ -113,7 +113,7 @@ int main() {
 
 // C - 1.3 ------------
 
-bool areDifferent(const std::vector<int>& a) {
+bool areDifferent(const vector<int>& a) {
 
     for (int i = 0; i < a.size(); i++) {
         for (int j = i + 1; j < a.size(); j++) {
@@ -126,7 +126,7 @@ bool areDifferent(const std::vector<int>& a) {
 }
 
 int main() {
-    std::vector<int> value = {1, 4, 3, 4};
+    vector<int> value = {1, 4, 3, 4};
 
     bool result = areDifferent(value);
 
@@ -138,9 +138,26 @@ int main() {
     return 0;
 }
 
-// C - 1. ------------
+// C - 1.4 ------------
 
+void oddValues(const vector<int>& a) {
 
+    for (int i = 0; i < a.size(); i++) {
+        if (a[i] % 2 == 1) {
+
+            std::cout << a[i] << std::endl;
+
+        }
+    }
+}
+
+int main() {
+    vector<int> value = {1, 4, 3, 4};
+
+    oddValues(value);
+    return 0;
+
+}
 
 
 
