@@ -24,7 +24,7 @@ abcabcdabc
 
 // R - 1.6 ------------
 
-double* dp[10]
+double* dp[10];
 for (int i = 0; i < 10; i++) {
     dp[i] = new double;
     *dp[i] = 0.0;
@@ -73,9 +73,9 @@ public:
 
 int main() {
     Flower flower ("Red Rose", 5, 2.99);
-    std::cout << flower.getName() << std::endl;
-    std::cout << flower.getPetals() << std::endl;
-    std::cout << flower.getPrice() << std::endl;
+    cout << flower.getName() << endl;
+    cout << flower.getPetals() << endl;
+    cout << flower.getPrice() << endl;
 
     return 0;
 }
@@ -103,9 +103,9 @@ int main() {
     int list[] = {2, 5, 6};
     bool result = evenProduct(list, 3);
     if (result) {
-        std::cout << "Product is even \n";
+        cout << "Product is even \n";
     } else {
-        std::cout << "Product is odd \n";
+        cout << "Product is odd \n";
     }
 
     return 0;
@@ -131,9 +131,9 @@ int main() {
     bool result = areDifferent(value);
 
     if (result) {
-        std::cout << "true \n";
+        cout << "true \n";
     } else {
-        std::cout << "false \n";
+        cout << "false \n";
     }
     return 0;
 }
@@ -145,7 +145,7 @@ void oddValues(const vector<int>& a) {
     for (int i = 0; i < a.size(); i++) {
         if (a[i] % 2 == 1) {
 
-            std::cout << a[i] << std::endl;
+            cout << a[i] << std::endl;
 
         }
     }
@@ -159,6 +159,36 @@ int main() {
 
 }
 
+// P - 1.1 ------------
+
+class Typo {
+
+private:
+    string text;
+    int counter;
+    int n;
+
+public:
+    Typo (string text) {
+        this->text = text;
+        this->counter = 0;
+        this->n = 10;
+    }
+
+    void printText() {
+        for (int i = 0; i < n; i++) {
+            cout << text << endl;
+            counter ++;
+        }
+    }
 
 
 
+};
+
+int main() {
+    string text = "I will always use object oriented programming";
+    Typo t(text);
+    t.printText();
+    return 0;
+}
